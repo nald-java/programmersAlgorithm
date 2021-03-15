@@ -1,13 +1,12 @@
-package programmers.test;
+//https://programmers.co.kr/learn/courses/30/lessons/12948?language=java
 
-public class Phone12948 {
 
-	public static void main(String[] args) {
+class Solution {
+    public String solution(String phone_number) {
+        String answer = "";
+        
 
-		String phone_number = "027778888";
-		String answer = "";
 		String encode ="";
-
 		String LastNum = phone_number.substring(phone_number.length() - 4);
 
 		for (int i = 0; i < phone_number.length() - 4; i++) {
@@ -15,8 +14,7 @@ public class Phone12948 {
 			encode = encode + "*";
 		}
 
-		System.out.println(encode + LastNum);
-
-	}
-
+        
+        return encode + LastNum;
+    }
 }
