@@ -1,24 +1,16 @@
 package programmers.test;
 
-public class Kim12919 {
-
-	public static void main(String[] args) {
-
+class Solution {
+    public String solution(String[] seoul) {
 		  String answer = "";
 	        
 	        int where = 0;
-	        String[] seoul = {"janem","Kim"};
-	        
-		        
+      		        
 	        for (int i = 0 ; i < seoul.length ; i++ ){
 	            if(seoul[i].equals("Kim")){
 	                where = i;
-	                break;
 	            }
 	        }
-	       System.out.println("±è¼­¹æÀº "+where+"¿¡ ÀÖ´Ù"); 
-		
-
-	}
-
+        return "ê¹€ì„œë°©ì€ "+where+"ì— ìžˆë‹¤";
+    }
 }
