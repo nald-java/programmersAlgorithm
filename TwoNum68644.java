@@ -1,14 +1,13 @@
-package programmers.test;
-
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
-import java.util.List;
 
-public class TwoNum68644 {
-
+class Solution {
     public int[] solution(int[] numbers) {
-        
-        ArrayList<Integer> aryTemp = new ArrayList<>();
+        int[] answer = {};
+       
+
+		ArrayList<Integer> aryTemp = new ArrayList<>();
 
 		for (int i = 0; i < numbers.length; i++) {
 			for (int j = numbers.length - 1; j > i; j--) {
@@ -23,11 +22,7 @@ public class TwoNum68644 {
 
 		aryTemp.sort(Comparator.naturalOrder());
 
-
-		System.out.println(aryTemp);
-		 
-//		 return answer;
+		return aryTemp.stream().sorted().mapToInt(Number::intValue).toArray();
         
     }
-
 }
